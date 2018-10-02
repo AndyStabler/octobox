@@ -17,6 +17,18 @@
   </div>
   <hr>
 
+  <div class="card mb-3">
+    <h5 class="card-header">
+      Saved Searches
+    </h5>
+    <div class="card-body">
+
+      <%= form_for current_user.saved_searches.build do |f| %>
+
+      <% end %>
+    </div>
+  </div>
+
   <%= form_for current_user do |f| %>
     <% if Octobox.refresh_interval_enabled? || Octobox.personal_access_tokens_enabled? %>
       <% if Octobox.refresh_interval_enabled? %>
